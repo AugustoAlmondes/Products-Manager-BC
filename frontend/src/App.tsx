@@ -1,16 +1,24 @@
-import Header from "./components/Header"
-import ProductsArea from "./components/ProductsArea"
 import Home from "./page/Home"
+import { Routes, Route } from "react-router-dom"
+import Login from "./page/Login"
+import MainLayout from "./components/MainLayout"
+import { LoginProvider } from "./contexts/LoginContext"
 
 function App() {
 
 
   return (
-    <>
-      <Header />
-      <Home />
-      <ProductsArea/>
-    </>
+    <LoginProvider>
+      <Routes>
+        <Route path='/login' element={<Login />} />
+
+        <Route element={<MainLayout />}>
+          <Route path='/' element={<Home />} />
+        </Route>
+
+        <Route path="*" element={<div>Página não encontrada</div>} />
+      </Routes>
+    </LoginProvider>
   )
 }
 

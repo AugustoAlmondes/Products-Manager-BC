@@ -1,4 +1,4 @@
-import { FaBars, FaStar } from "react-icons/fa";
+import { FaBars, FaStar, FaUser } from "react-icons/fa";
 import { useState } from "react";
 import { motion as MOTION, AnimatePresence } from "motion/react";
 import { IoCart } from "react-icons/io5";
@@ -14,6 +14,7 @@ export default function Header() {
 
     return (
         <>
+
             <div className="fixed top-0 left-0 right-0 z-999">
 
                 <div className={`${isOpen ? 'bg-custom_blue_light' : 'bg-custom_blue_light/60 backdrop-blur-[5px]'} flex items-center justify-between px-4 h-20 text-white transition-colors duration-200`}>
@@ -22,6 +23,8 @@ export default function Header() {
                     <FaBars
                         className={`text-2xl text-white hover:custom_orange_dark cursor-pointer`}
                         onClick={() => { setIsOpen(!isOpen) }} />
+
+                    <FaUser/>
 
                 </div>
 
@@ -34,7 +37,7 @@ export default function Header() {
                                 animate={{ opacity: 1, height: 'auto' }}
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.3 }}
-                                className={`bg-custom_blue_light/80 rounded-b-2xl overflow-hidden flex flex-wrap gap-1.5 items-center h-100
+                                className={`bg-custom_blue_light/80 overflow-hidden flex flex-wrap gap-1.5 items-center h-100
                                 justify-around text-white backdrop-blur-[3px]`}>
                                 <li className={liStyle}><FaHouse /> Home</li>
                                 <li className={liStyle}><BsFillBoxSeamFill /> Produtos</li>
