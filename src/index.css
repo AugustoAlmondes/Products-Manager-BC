@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+*{
+    font-family: 'Inter';
+}
+
+@theme{
+    --color-custom_blue:#273853;
+    --color-custom_blue_light: #2f4a74;
+    --color-custom_blue_dark: #1a2437;
+    
+    --color-custom_orange: #74442f;
+    --color-custom_orange_light: #e1d1a6;
+    --color-custom_orange_dark: #5e3829;
+
+    --color-white-gradient-bg: #EEEE;
+    --color-smooth-orange-gradient-bg:#F5ECD7;
+}
