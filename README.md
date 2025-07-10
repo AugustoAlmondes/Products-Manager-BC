@@ -1,69 +1,53 @@
-# React + TypeScript + Vite
+# Gerenciador de Produtos - Básico da Construção
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto fullstack desenvolvido para a empresa **Básico da Construção**, com o objetivo de praticar e aprimorar conhecimentos em desenvolvimento web moderno. O sistema permite o gerenciamento de produtos de forma eficiente e intuitiva.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**
+  - [React](https://react.dev/)
+  - [Vite](https://vitejs.dev/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Framer Motion](https://www.framer.com/motion/) (animações)
+  - [React Router](https://reactrouter.com/) (roteamento)
+  - Outras bibliotecas auxiliares
 
-## Expanding the ESLint configuration
+- **Backend**
+  - [Node.js](https://nodejs.org/)
+  - (Em desenvolvimento)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Status do Projeto
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🚧 **Em desenvolvimento**  
+Funcionalidades e integrações estão sendo implementadas e aprimoradas continuamente.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Como rodar o projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/product-manager-bc.git
+   ```
+2. Instale as dependências:
+   ```bash
+   cd frontend
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Objetivos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Gerenciar produtos (CRUD)
+- Interface moderna e responsiva
+- Integração com backend Node.js
+- Praticar boas práticas de desenvolvimento fullstack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contribuição
+
+Este projeto é para fins de estudo, mas sugestões e melhorias são bem-vindas!
+
+---
+
+> Projeto criado por Augusto Almondes para fins de aprendizado.
