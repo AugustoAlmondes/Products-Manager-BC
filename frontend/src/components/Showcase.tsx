@@ -1,25 +1,33 @@
-// import './nome.module.css';
-// import styles from './nome.module.css';
-
 import ViewProduct from "./ViewProduct";
 
 export default function Showcase() {
     return (
-        <div className="min-h-screen bg-custom_blue_light text-center py-40 ">
-            <h1 className="text-center font-bold text-5xl text-white">MAIS VENDIDOS</h1>
-            <p className="mb-20 text-center text-lg text-white">Veja os produtos mais vendidos da loja</p>
+        <div className="bg-gray-100 min-h-screen text-center py-20 ">
+            <h1 className="font-bold text-center text-2xl md:text-start sm:text-3xl md:text-[2rem] pl-4 text-amber-600">NOSSOS PRODUTOS MAIS VENDIDOS</h1>
+            <div className="w-3/4 sm:w-full md:w-full mx-auto mt-3 md:text-start">
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3 p-4 ">
-                <ViewProduct/>
-                <ViewProduct/>
-                <ViewProduct/>
-                <ViewProduct/>
-                <ViewProduct/>
-                <ViewProduct/>
-                <ViewProduct/>
-                <ViewProduct/>
+                <p 
+                className="mb-5 text-center md:text-start md:pl-4 text-md text-black">
+                    Veja os produtos mais vendidos da loja no momento. Esses produtos foram comprados pelos nossos clientes </p>
             </div>
-            <p className='text-center mt-5 text-amber-600 font-bold cursor-pointer hover:text-amber-700 transition-colors duration-300 underline'>Ver todos os produtos</p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-3 p-4 ">
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+                <ViewProduct />
+            </div>
+            <button className='text-center mt-5 font-bold px-4 py-2 rounded cursor-pointer bg-amber-600 transition-colors duration-300 text-white'>
+                Ver todos os produtos
+                </button>
         </div>
     );
 }

@@ -16,3 +16,16 @@
     --color-white-gradient-bg: #EEEE;
     --color-smooth-orange-gradient-bg:#F5ECD7;
 }
+
+.slide-track{
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 12));
+    }
+}

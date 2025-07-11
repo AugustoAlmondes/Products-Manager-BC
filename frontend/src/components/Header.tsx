@@ -5,8 +5,11 @@ import { IoCart } from "react-icons/io5";
 import { BsFillBoxSeamFill } from "react-icons/bs";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { FaHouse } from "react-icons/fa6";
+import { useLogin } from "../contexts/useLogin";
 
 export default function Header() {
+
+    const { login } = useLogin();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -17,14 +20,21 @@ export default function Header() {
 
             <div className="fixed top-0 left-0 right-0 z-999">
 
-                <div className={`${isOpen ? 'bg-custom_blue_light' : 'bg-custom_blue_light/60 backdrop-blur-[5px]'} flex items-center justify-between px-4 h-20 text-white transition-colors duration-200`}>
+                <div className={`${isOpen ? 'bg-custom_blue_light' : 'bg-custom_blue_light/60 backdrop-blur-[5px]'} px-4 h-20 text-white transition-colors duration-200
+                grid grid-cols-3 items-center place-items-center gap-20
+                    `}>
                     <h1 className="font-bold text-2xl">BC</h1>
 
                     <FaBars
-                        className={`text-2xl text-white hover:custom_orange_dark cursor-pointer`}
+                        className={`text-2xl text-white text-center hover:text-amber-500 cursor-pointer transition-colors duration-300`}
                         onClick={() => { setIsOpen(!isOpen) }} />
 
-                    <FaUser/>
+                        { login ?
+                            <FaUser className="text-xl text-white hover:custom_orange_dark cursor-pointer" />
+                            : <button className=
+                            "text-sm text-white py-1 px-3 border-white border-[1px] hover:bg-amber-500 hover:text-white rounded-sm transition-colors duration-300 cursor-pointer"
+                            >LOGIN</button>
+                        }
 
                 </div>
 
