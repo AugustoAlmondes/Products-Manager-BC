@@ -5,7 +5,7 @@ export default function MainLayout() {
     return (
         <>
         <Header/>
-        <main>
+        <main className="mt-20">
             <Outlet/>
         </main>
         </>
